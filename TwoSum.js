@@ -73,6 +73,6 @@ const twoSum3 = (nums, target) => {
 
 let nums3 = [2, 7, 11, 15]
 let target3 = 26
-console.log(twoSum2(nums3, target3))
+console.log(twoSum3(nums3, target3))
 
 //Comment: Approach 2 and 3 are very similar, both use hash table, and both are O(n). 
