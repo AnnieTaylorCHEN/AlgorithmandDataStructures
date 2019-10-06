@@ -40,6 +40,8 @@ let array3 = [0,3,4,31]
 let array4 = [-2,-1,0,3,4,6,30]
 console.log(mergeTwoArraysSorted(array3, array4))
 
+//Comment: this doesn't work when both numbers turn to be 0. 
+
 
 //Approach 2
 const mergeTwoArraysSorted2 = (array1, array2) => {
