@@ -62,7 +62,7 @@ class LinkedList {
             value: value,
             next: null 
         }
-        const leader = this.traverseToIndex(index-1) //the leader is the node before the on you intend to insert
+        const leader = this.traverseToIndex(index-1) //the leader is the node before the one you intend to insert
         const holdingPointer = leader.next //get the pointer from the leader, which was originally pointed to the next one (now becoming the next after your insert)
         leader.next = newNode //make the leader node point to the one you intend to insert
         newNode.next = holdingPointer // make your inserted node point to the original one which was next to the leader (now becoming the one after yours)
