@@ -17,7 +17,7 @@ const mergeTwoArraysSorted = (array1, array2) => {
     let j = 1
     
     //we loop through both arrays, and compare them to see which is smaller, whichever smaller gets pushed to new array. 
-    while (array1Item || array2Item ) {
+    while (i <= array1.length || array2Item) {
         if (!array2Item || array1Item < array2Item) {
             newArray.push(array1Item)
             array1Item = array1[i]
@@ -73,3 +73,39 @@ console.log(mergeTwoArraysSorted3(array1, array2))
 array3 = [0,3,4,31]
 array4 = [-2,-1,0,3,4,6,30]
 console.log(mergeTwoArraysSorted3(array3, array4))
+
+//Approach 4
+const mergeTwoArraysSorted4 = (array1, array2) => {
+    if (array1.length === 0) {
+        return array2
+    } else if (array2.length === 0) {
+        return array1
+    }
+
+    let newArray = []
+    let expectedLength = array1.length + array2.length
+    let i = 0
+    let j = 0
+    
+    //we loop through both arrays, and compare them to see which is smaller, whichever smaller gets pushed to new array. 
+    while(newArray.length !== expectedLength) {
+        if(array1[i] < array2[j] || array2[j] === undefined ) {
+            newArray.push(array1[i])
+            i++
+        } else {
+            newArray.push(array2[j])
+            j++
+        }
+    }
+    return newArray
+}
+
+array1 = [0, 3, 4, 31]
+array2 = [4, 6, 30]
+console.log(mergeTwoArraysSorted4(array1, array2))
+
+array3 = [0,3,4,31]
+array4 = [-2,-1,0,3,4,6,30]
+console.log(mergeTwoArraysSorted4(array3, array4))
+
+// Comment: Approach 4 is a refactoring of the approach 1. 
