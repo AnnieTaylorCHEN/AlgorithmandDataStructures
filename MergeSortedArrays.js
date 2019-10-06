@@ -74,6 +74,8 @@ array3 = [0,3,4,31]
 array4 = [-2,-1,0,3,4,6,30]
 console.log(mergeTwoArraysSorted3(array3, array4))
 
+//Comment: although approach 2 and 3 seems shorter and easier, the time complexity is not as good as approach 4. Because sort() is O(n^2) or O(n log n).
+
 //Approach 4
 const mergeTwoArraysSorted4 = (array1, array2) => {
     if (array1.length === 0) {
