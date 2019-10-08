@@ -25,3 +25,12 @@ const reverseString2 = (input) => {
 }
 
 console.log(reverseString2(input))
+
+//Approach 3 
+console.log('NOTE: below is approach 3')
+
+const reverseString3 = (input) => {
+    return input.split('').reduce((rev, char) => char + rev, '')
+}
+
+console.log(reverseString3(input))
