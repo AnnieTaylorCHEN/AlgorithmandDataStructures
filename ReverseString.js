@@ -34,3 +34,36 @@ const reverseString3 = (input) => {
 }
 
 console.log(reverseString3(input))
+
+//Approach 4
+console.log('NOTE: below is approach 4')
+
+const reverseString4 = (input) => {
+    let arrayStr = input.split('')
+    let reversedArray = []
+    const addToArray = (array) => {
+        if (array.length > 0){
+            reversedArray.push(array.pop())
+            addToArray(array)
+        }
+        return
+    }
+    addToArray(arrayStr)
+    return reversedArray.join('')
+}
+
+console.log(reverseString4(input))
+
+//Approach 5 
+console.log('NOTE: below is approach 5')
+
+const reverseString5 = (input) => {
+    if (input === '') {
+        return ''
+    } else {
+        return reverseString5(input.substr(1)) + input.charAt(0)
+    }
+}
+
+console.log(reverseString5(input))
+
