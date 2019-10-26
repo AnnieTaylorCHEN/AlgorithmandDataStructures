@@ -110,4 +110,5 @@ array3 = [0,3,4,31]
 array4 = [-2,-1,0,3,4,6,30]
 console.log(mergeTwoArraysSorted4(array3, array4))
 
+
 // Comment: Approach 4 is a refactoring of the approach 1. 
