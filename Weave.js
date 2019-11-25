@@ -43,6 +43,7 @@ class Queue {
     }
 
     peek() {
+        //last element from queue
         return this.data[this.data.length -1]
     }
   }
