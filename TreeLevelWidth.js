@@ -11,7 +11,7 @@
 // 4       5
 // Answer: [1, 3, 2]
 
-const levelWidth = (root) {
+const levelWidth = (root) => {
     //creat a string named "s" as a stopper/marker to work on the queue
     const arr = [root, 's']
     const counters = [0]
